@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    background-color: #f9f8f6;
+    color: #1d1d1b;
+    font-family: 'Helvetica Neue', Helvetica;
+    letter-spacing: 2px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    cursor: pointer;
+}
+
+h2 {
+    transform: translateY(-50%);
+}
+
+
+kode-input {
+    display: block;
+    position: relative;
+}
+
+kode-input label {
+    display: block;
+    position: absolute;
+    transform: translateY(-50%) scale(.5);
+    transform-origin: left top;
+}
+
+kode-input input {
+    background: transparent;
+    border: transparent;
+    font-size: inherit;
+    color: inherit;
+    outline: none;
+}
+
+kode-input .line {
+    position: relative;
+    display: block;
+    background: #ff584f;
+    height: 1px;
+    width: 100%;
+    margin-top: 2px;
+}
+
+kode-input i {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    display: block;
+    top: 0;
+    color: #ff584f;
+}

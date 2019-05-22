@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NgComponent</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+<header><a href="https://github.com/konstantindenerz"><i class="fab fa-github"></i></a></header>
+<h2>Angular - Web Component (Elements)</h2>
+<kode-ng-input id="input" label="Please enter 42" validator="42"></kode-ng-input>
+<div id="output"></div>
+<script>
+  // host application code
+  document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+
+    // Use properties to assign state (complex objects) to custom element instance
+    input.validator = {
+      validate: (value) => value === '42',
+    };
+
+    input.addEventListener('inputChange', (event) => {
+      output.innerText = `value: ${event.detail}, Date.now: ${Date.now()}`
+    })
+  })
+</script>
+</body>
+</html>

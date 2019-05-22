@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NgReactComponent</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="assets/react-component.js"></script>
+  <style>
+    .App {
+      display: block;
+      position: relative;
+      text-align: center;
+    }
+
+    .App label {
+      display: block;
+      position: absolute;
+      transform: translateY(-50%) scale(.5);
+      transform-origin: left top;
+    }
+
+    .App input {
+      background: transparent;
+      border: transparent;
+      font-size: inherit;
+      color: inherit;
+      outline: none;
+      width: 100%;
+    }
+
+    .App .line {
+      position: relative;
+      display: block;
+      background: #ff584f;
+      height: 1px;
+      width: 100%;
+      margin-top: 2px;
+    }
+
+    .App i {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 0;
+      display: block;
+      top: 0;
+      color: #ff584f;
+    }
+
+  </style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+<header><a href="https://github.com/konstantindenerz"><i class="fab fa-github"></i></a></header>
+<h2>Angular App with React Web Component</h2>
+  <app-root></app-root>
+</body>
+</html>

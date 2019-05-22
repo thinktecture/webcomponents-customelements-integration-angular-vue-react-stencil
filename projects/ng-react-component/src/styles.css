@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+  height: 100vh;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: #f9f8f6;
+  color: #1d1d1b;
+  font-family: 'Helvetica Neue', Helvetica;
+  letter-spacing: 2px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  cursor: pointer;
+}
+
+h2 {
+  transform: translateY(-50%);
+}

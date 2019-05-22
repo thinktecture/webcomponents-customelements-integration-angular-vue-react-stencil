@@ -1,0 +1,38 @@
+:host {
+  position: relative;
+}
+
+label {
+  display: block;
+  position: absolute;
+  transform: translateY(-50%) scale(.5);
+  transform-origin: left top;
+}
+
+input {
+  background: transparent;
+  border: transparent;
+  font-size: inherit;
+  color: inherit;
+  outline: none;
+  width: 100%;
+}
+
+.line {
+  position: relative;
+  display: block;
+  background: #ff584f;
+  height: 1px;
+  width: 100%;
+  margin-top: 2px;
+}
+
+i {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  display: block;
+  top: 0;
+  color: #ff584f;
+}

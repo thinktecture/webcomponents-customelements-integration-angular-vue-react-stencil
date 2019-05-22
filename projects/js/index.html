@@ -1,0 +1,24 @@
+<html>
+<head>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+<body>
+<header><a href="https://github.com/konstantindenerz"><i class="fab fa-github"></i></a></header>
+<h2>Pure JavaScript - Web Component</h2>
+
+<kode-input id="input" label="Please enter 42"></kode-input>
+<script src="input.component.js"></script>
+
+<script>
+    // host application code
+    const input = document.getElementById('input');
+    // Use properties to assign state (complex objects) to custom element instance
+    input.validator = {
+        validate: (value) => value === '42',
+    }
+</script>
+</body>
+</html>

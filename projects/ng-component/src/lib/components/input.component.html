@@ -1,0 +1,8 @@
+<!-- Hack to use icon font in Shadow DOM-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<label>{{label}}</label>
+<input type="text" (keyup)="handleKeyup($event)">
+<div class="line"></div>
+<i class="fas" [ngClass]="{'fa-check': isValid, 'fa-times': !isValid}"></i>

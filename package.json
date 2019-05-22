@@ -1,0 +1,40 @@
+{
+  "name": "webcomponents-customelements-integration-angular-vue-react-stencil",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start-js": "lite-server -c projects/js/bs-config.json",
+    "start-ng-component": "cd projects/ng-component && ng serve",
+    "start-react-component": "cd projects/react-component && npm run start",
+    "start-vue-component": "cd projects/vue-component && npm run serve",
+    "start-stencil-component": "cd projects/stencil-component && npm run start",
+    "start-ng-react-component": "cd projects/ng-react-component && npm run start",
+    "start-ng-vue-component": "cd projects/ng-vue-component && npm run start",
+    "postinstall": "npm run install-ng-component && npm run install-react-component && npm run install-ng-react-component && npm run install-vue-component && npm run install-stencil-component",
+    "install-ng-component": "cd projects/ng-component && npm i && cd ../..",
+    "install-react-component": "cd projects/react-component && npm i && cd ../..",
+    "install-ng-react-component": "cd projects/ng-react-component && npm i && cd ../..",
+    "install-vue-component": "cd projects/vue-component && npm i && cd ../..",
+    "install-ng-vue-component": "cd projects/ng-vue-component && npm i && cd ../..",
+    "install-stencil-component": "cd projects/stencil-component && npm i && cd ../..",
+    "build-prod-ng-component": "cd projects/ng-component && ng build --prod",
+    "build-prod-react-component": "cd projects/react-component && cross-env GENERATE_SOURCEMAP=false npm run build",
+    "build-prod-vue-component": "cd projects/vue-component && npm run build",
+    "bundle-ng-component": "shx cat projects/ng-component/dist/ng-component/{runtime-es2015,scripts,styles-es2015,main-es2015}.js > projects/ng-component/dist/ng-component/ng-component.js",
+    "bundle-react-component": "shx cat projects/react-component/build/static/js/{runtime~main.*,*.chunk}.js > projects/react-component/build/static/js/react-component.js",
+    "bundle-vue-component": "shx cat projects/vue-component/dist/js/{chunk-vendors.*,app.*}.js > projects/vue-component/dist/js/vue-component.js",
+    "copy-ng-component-to-react-component": "shx cp projects/ng-component/dist/ng-component/ng-component.js projects/react-component/public/ng-component.js",
+    "copy-react-component-to-ng-react-component": "shx cp projects/react-component/build/static/js/react-component.js projects/ng-react-component/src/assets/react-component.js",
+    "copy-vue-component-to-ng-vue-component-1": "shx cp projects/vue-component/dist/js/vue-component.js projects/ng-vue-component/src/assets/vue-component.js",
+    "copy-vue-component-to-ng-vue-component-2": "shx cat projects/vue-component/dist/css/app.*.css > projects/ng-vue-component/src/assets/vue-component.css",
+    "prestart-react-component": "npm run build-prod-ng-component && npm run bundle-ng-component && npm run copy-ng-component-to-react-component",
+    "prestart-ng-react-component": "npm run build-prod-react-component && npm run bundle-react-component && npm run copy-react-component-to-ng-react-component",
+    "prestart-ng-vue-component": "npm run build-prod-vue-component && npm run bundle-vue-component && npm run copy-vue-component-to-ng-vue-component-1 && npm run copy-vue-component-to-ng-vue-component-2"
+  },
+  "devDependencies": {
+    "@angular/cli": "^8.0.0-rc.4",
+    "cross-env": "^5.2.0",
+    "lite-server": "^2.4.0",
+    "shx": "^0.3.2"
+  }
+}

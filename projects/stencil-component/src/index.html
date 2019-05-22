@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/stencil-component.esm.js"></script>
+  <script nomodule src="/build/stencil-component.esm.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style>
+    /* You can add global styles to this file, and also import other style files */
+    html{
+      height: 100vh;
+    }
+    body {
+      height: 100vh;
+      margin: 0;
+      background-color: #f9f8f6;
+      color: #1d1d1b;
+      font-family: 'Helvetica Neue', Helvetica;
+      letter-spacing: 2px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    header{
+      position: absolute;
+      top: 0;
+      padding: 20px;
+      cursor: pointer;
+    }
+
+    h2 {
+      transform: translateY(-50%);
+    }
+
+  </style>
+</head>
+<body>
+<header><a href="https://github.com/konstantindenerz"><i class="fab fa-github"></i></a></header>
+<h2>Stencil Web Component</h2>
+  <kode-stencil-input id="input" label="Please enter 42"></kode-stencil-input>
+  <div id="output"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const output = document.getElementById('output');
+      const input = document.getElementById('input');
+      // assign state or services ...
+      input.validator = { validate: (v) => v === '42' };
+      input.addEventListener('inputChange', (event) => {
+        console.warn('itemChange', event)
+        output.innerText = event.detail;
+      })
+    })</script>
+</body>
+</html>
