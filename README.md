@@ -29,22 +29,23 @@ All demos are in the projects folder. The order of the following list is the rec
 
 ## How to start 🚀
 
-After the cloning, the dependencies must be installed with `npm i` before the first start. 
+After cloning the repo, the dependencies must be installed with `npm i` before the very first start. 
 
 Execute `npm run` to get the list of start commands.
 
-To start a specific project:
+To start a specific demo project:
 `npm run start-{project name}`
 
-For example to start the JS project execute `npm run start-js` in the terminal.
+For example, to start the plain JS project, execute `npm run start-js` in the terminal.
 
 
 
 ## Bugs 🐛 & Improvements ✨
 
-Just create an issue in the current repo.
+Any feedback is highly appreciated. Please just create an issue in the current repo.
 
 
 
 
-It works in Chrome.
+The demos have been tested primarily in recent Chrome. Please let us know when you have issues with other browsers.
+Thank you!
