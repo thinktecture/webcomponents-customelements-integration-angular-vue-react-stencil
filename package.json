@@ -2,6 +2,9 @@
   "name": "webcomponents-customelements-integration-angular-vue-react-stencil",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": ">=10.9.0 <11.0.0"
+  },
   "scripts": {
     "start-js": "lite-server -c projects/js/bs-config.json",
     "start-ng-component": "cd projects/ng-component && ng serve",
