@@ -2,6 +2,9 @@
   "name": "webcomponents-customelements-integration-angular-vue-react-stencil",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": ">=10.9.0 <11.0.0"
+  },
   "scripts": {
     "start-js": "lite-server -c projects/js/bs-config.json",
     "start-ng-component": "cd projects/ng-component && ng serve",
@@ -10,7 +13,7 @@
     "start-stencil-component": "cd projects/stencil-component && npm run start",
     "start-ng-react-component": "cd projects/ng-react-component && npm run start",
     "start-ng-vue-component": "cd projects/ng-vue-component && npm run start",
-    "postinstall": "npm run install-ng-component && npm run install-react-component && npm run install-ng-react-component && npm run install-vue-component && npm run install-stencil-component",
+    "postinstall": "npm run install-ng-component && npm run install-react-component && npm run install-ng-react-component && npm run install-vue-component && npm run install-ng-vue-component && npm run install-stencil-component",
     "install-ng-component": "cd projects/ng-component && npm i && cd ../..",
     "install-react-component": "cd projects/react-component && npm i && cd ../..",
     "install-ng-react-component": "cd projects/ng-react-component && npm i && cd ../..",
